@@ -32,6 +32,7 @@ def jugar(mazo, casa, jugador):
             else: print("Te has pasado :'c pierdes :c")
     else:
         jugar(mazo[4:],mazo[:2], mazo[2:4])
+        
 def juegopc(mazo, casa, jugador):
     print("La casa tiene ", casa, " con un total de ", valor_mano(casa))
    
@@ -39,8 +40,8 @@ def juegopc(mazo, casa, jugador):
         print("la casa gana")
     elif valor_mano(casa)<21 and valor_mano(casa)<valor_mano(jugador):
         juegopc(mazo[1:], casa+mazo[:1], jugador)
-    elif valor_mano(casa)>valor_mano(jugador) and valor_mano(casa)<21:
-            pritn("La casa gana")
+    elif valor_mano(casa)>=valor_mano(jugador) and valor_mano(casa)<21:
+            print("La casa gana")
     else:
         print("Has ganado con : ", jugador )
     
